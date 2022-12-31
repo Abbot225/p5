@@ -21,10 +21,19 @@ h2 {
 	border-top: 1px solid white;
 	padding-top: 35px;
 	margin-bottom: 30px;
+	
+
 }
 .cart__item__img {
 	width: 25%;
+	
 }
+
+.sample{
+	height: 400px;
+	width: 400px;
+}
+
 .cart__item__img img {
 	width: 100%;
 	border-radius: 25px;
