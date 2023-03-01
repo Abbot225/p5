@@ -10,6 +10,8 @@ apiRequest.onreadystatechange = () => {
 
         const itemsSection = document.querySelector("#items");
 
+        
+
         products.forEach(product => {
             const productLink = document.createElement("a");
             productLink.href = "./product.html?id=" + product._id;
@@ -35,6 +37,11 @@ apiRequest.onreadystatechange = () => {
             productLink.appendChild(productArticle);
 
             itemsSection.appendChild(productLink);
+
+
+            
+            
         });
     }
 };
+
