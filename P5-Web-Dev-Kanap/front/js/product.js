@@ -20,6 +20,17 @@ apiRequest.onreadystatechange = () => {
         const productImage = document.querySelector("#img");
         productImage.src = product.imageUrl;
         productImage.alt = product.name;
-        itemsSection.appendChild(productImage);
+        
+
+        const productName = document.createElement("h3");
+        productName.classList.add("productName");
+        productName.textContent = product.name;
+
+        const productDescription = document.getElementById('description');
+     
+        productDescription.textContent = product.description;
+
+       const product
+
     }
 }
