@@ -17,20 +17,46 @@ apiRequest.onreadystatechange = () => {
         const product = JSON.parse(apiRequest.response);
         console.log(product);
          
-        const productImage = document.querySelector("#img");
+        const productImage = document.getElementById('img');
         productImage.src = product.imageUrl;
         productImage.alt = product.name;
         
 
-        const productName = document.createElement("h3");
-        productName.classList.add("productName");
-        productName.textContent = product.name;
+        const productName = document.getElementById('title');
+        productName.innerHTML = product.name;
 
         const productDescription = document.getElementById('description');
-     
         productDescription.textContent = product.description;
 
-       const product
+        const productPrix = document.getElementById('price');
+        productPrix.textContent = product.price;
 
+        const productColors = document.getElementById('colors');
+       
+        product.colors.forEach( color => {
+            var option= document.createElement("option")
+            option.text=color
+            productColors.add(option);
+        });
+        
+        const addButton = document.getElementById('addToCart')
+        addButton.addEventListener ('click',() => {
+                        console.log('add to cart');
+            })
+        
+        
+       
+        
+       
+    }
+}
+
+function cartNumbers(){
+    let productNumbers =localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
+
+    if(productNumbers){
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('')
     }
 }

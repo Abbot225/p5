@@ -1,3 +1,4 @@
+
 let apiRequest = new XMLHttpRequest();
 
 apiRequest.open('GET', 'http://127.0.0.1:3000/api/products');
@@ -9,8 +10,6 @@ apiRequest.onreadystatechange = () => {
         const products = JSON.parse(apiRequest.response);
 
         const itemsSection = document.querySelector("#items");
-
-        
 
         products.forEach(product => {
             const productLink = document.createElement("a");
@@ -37,11 +36,7 @@ apiRequest.onreadystatechange = () => {
             productLink.appendChild(productArticle);
 
             itemsSection.appendChild(productLink);
-
-
-            
             
         });
     }
 };
-
