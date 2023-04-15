@@ -41,22 +41,44 @@ apiRequest.onreadystatechange = () => {
         
         const addButton = document.getElementById('addToCart')
         addButton.addEventListener ('click',() => {
-                        console.log('add to cart');
-            })
+            updateCart()
+            console.log('add to cart');
+         })
         
-        
+        //const itemQuantity = document.getElementById('quantity')
+       // itemQuantity.addEventListener ('click',() => {
+       //     cartNumbers('')
+        //    console.log('number of articles (1-100)');
+       //  })
        
         
        
     }
 }
 
-function cartNumbers(){
-    let productNumbers =localStorage.getItem('cartNumbers');
-    productNumbers = parseInt(productNumbers);
 
-    if(productNumbers){
-        localStorage.setItem('cartNumbers', productNumbers + 1);
-        document.querySelector('')
+
+function updateCart(){
+    let cartJson =localStorage.getItem('cart');
+    let cart = JSON.parse(cartJson);
+    
+    if(!cart ){
+        cart =[]
+    } 
+    let item = {
+        id:id,
+        color:document.getElementById('colors').value,
+        quantity: document.getElementById('quantity').value
     }
+    cart.push(item)
+  
+    localStorage.setItem("cart", JSON.stringify(cart));
+    document.getElementById("cartcount").innerHTML = localStorage.getItem("cart");
+
+    // document.querySelectorAll('#cartcount').innerHTML(productNumbers);
 }
+
+
+
+
+
