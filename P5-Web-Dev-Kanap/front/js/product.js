@@ -45,12 +45,7 @@ apiRequest.onreadystatechange = () => {
             console.log('add to cart');
          })
         
-        //const itemQuantity = document.getElementById('quantity')
-       // itemQuantity.addEventListener ('click',() => {
-       //     cartNumbers('')
-        //    console.log('number of articles (1-100)');
-       //  })
-       
+      
         
        
     }
@@ -88,7 +83,7 @@ function updateCart(){
     
     }
 
-    const cartCount = document.getElementById('cartcount');{
+   const cartCount = document.getElementById('cartcount');{
     cartCount.style.display = 'none';
 }
   
@@ -106,11 +101,3 @@ function updateCart(){
 
     // document.querySelectorAll('#cartcount').innerHTML(productNumbers);
 }
-
-
-
-
-
-
-
-   
